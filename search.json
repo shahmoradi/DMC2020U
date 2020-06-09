@@ -1,6 +1,14 @@
 [
 	
 		{
+		  "title"      : "Lecture 1: Version Control Systems, Git, and GitHub",
+		  "category"   : "",
+		  "url"        : "/DMC2020U/lecture/1-vcs",
+		  "date"       : "2020-06-08 00:00:00 -0500",
+		  "shortdate"  : "June 08, 2020"
+		} ,
+	
+		{
 		  "title"      : "Announcement 0: Student-professor connection day",
 		  "category"   : "",
 		  "url"        : "/DMC2020U/announcement/0-student-professor-connection-day",
