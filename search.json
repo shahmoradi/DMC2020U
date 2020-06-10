@@ -9,6 +9,14 @@
 		} ,
 	
 		{
+		  "title"      : "Homework 1: Version Control Using Git and Github",
+		  "category"   : "",
+		  "url"        : "/DMC2020U/homework/1-version-control-using-git-github",
+		  "date"       : "2020-06-08 00:00:00 -0500",
+		  "shortdate"  : "June 08, 2020"
+		} ,
+	
+		{
 		  "title"      : "Announcement 0: Student-professor connection day",
 		  "category"   : "",
 		  "url"        : "/DMC2020U/announcement/0-student-professor-connection-day",
