@@ -7,13 +7,100 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/DMC2020U/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/DMC2020U/" />
-<updated>2020-06-11T15:39:34-05:00</updated>
+<updated>2020-06-16T19:52:54-05:00</updated>
 <id>http:/DMC2020U/</id>
 <author>
   <name>Amir Shahmoradi</name>
   <uri>http:/DMC2020U/</uri>
   <email>shahmoradi@utexas.edu</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Lecture 3: The structure of the Python programming language]]></title>
+  <link rel="alternate" type="text/html" href="http:/DMC2020U/lecture/3-python-programming-structure"/>
+  <id>http:/DMC2020U/lecture/3-python-programming-structure</id>
+  <published>2020-06-18T00:00:00-05:00</published>
+  <updated>0000-00-00T00:00:00-00:00</updated>
+  
+  <author>
+    <name>Amir Shahmoradi</name>
+    <uri>http:/DMC2020U</uri>
+    <email>shahmoradi@utexas.edu</email>
+  </author>
+  
+  <content type="html">
+  
+    
+&lt;p&gt;This lecture aims at providing an overview of the structure of and the coding practices within the Python programming language.&lt;/p&gt;
+
+&lt;p&gt;Throughout this and the following lecture, we will provide a quick overview of the Python programming language syntax, with an emphasis on the tools and commands needed for Data Mining. We will follow the lecture available &lt;a href=&quot;https://www.cdslab.org/python/&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt; and starting from &lt;a href=&quot;https://www.cdslab.org/python/notes/values-variables-types/first-program/first-program.html&quot; target=&quot;_blank&quot;&gt;variables in Python&lt;/a&gt;.&lt;/p&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;http:/DMC2020U/lecture/3-python-programming-structure&quot;&gt;Lecture 3: The structure of the Python programming language&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/DMC2020U&quot;&gt;DATA 3401 - Summer 2020 - TTH 10:30-12:20 - Microsoft Teams Virtual Room&lt;/a&gt; on June 18, 2020.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Lecture 2: The Python programming language]]></title>
+  <link rel="alternate" type="text/html" href="http:/DMC2020U/lecture/2-python-programming-introduction"/>
+  <id>http:/DMC2020U/lecture/2-python-programming-introduction</id>
+  <published>2020-06-16T00:00:00-05:00</published>
+  <updated>0000-00-00T00:00:00-00:00</updated>
+  
+  <author>
+    <name>Amir Shahmoradi</name>
+    <uri>http:/DMC2020U</uri>
+    <email>shahmoradi@utexas.edu</email>
+  </author>
+  
+  <content type="html">
+  
+    
+&lt;p&gt;This lecture aims at providing an overview of the history of programming and the Python programming language.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cdslab.org/python/notes/preliminary-foundations/programming-history/programming-history.html&quot; target=&quot;_blank&quot;&gt;Programming history&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cdslab.org/python/notes/preliminary-foundations/computer-program-structure/computer-program-structure.html&quot; target=&quot;_blank&quot;&gt;Computer program structure&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cdslab.org/python/notes/preliminary-foundations/python-for-beginners/python-for-beginners.html&quot; target=&quot;_blank&quot;&gt;Beginning Python&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;http:/DMC2020U/lecture/2-python-programming-introduction&quot;&gt;Lecture 2: The Python programming language&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/DMC2020U&quot;&gt;DATA 3401 - Summer 2020 - TTH 10:30-12:20 - Microsoft Teams Virtual Room&lt;/a&gt; on June 16, 2020.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Homework 2: Python programming]]></title>
+  <link rel="alternate" type="text/html" href="http:/DMC2020U/homework/2-python-programming"/>
+  <id>http:/DMC2020U/homework/2-python-programming</id>
+  <published>2020-06-16T00:00:00-05:00</published>
+  <updated>2020-06-16T00:00:00-05:00</updated>
+  <author>
+    <name>Amir Shahmoradi</name>
+    <uri>http:/DMC2020U</uri>
+    <email>shahmoradi@utexas.edu</email>
+  </author>
+  
+  <content type="html">
+  
+    
+&lt;p&gt;♣ &lt;strong&gt;Due Date: Tuesday June 23, 2020 10:30 AM&lt;/strong&gt;. This homework aims at giving you some experience on how to work with the Python programming language constructs.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cdslab.org/recipes/programming/integer-overflow/integer-overflow&quot; target=&quot;_blank&quot;&gt;Integer overflow&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cdslab.org/recipes/programming/python-variable-aliasing-copying/python-variable-aliasing-copying&quot; target=&quot;_blank&quot;&gt;Variable aliasing&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cdslab.org/recipes/programming/implementing-gaussian-function/implementing-gaussian-function&quot; target=&quot;_blank&quot;&gt;Implementing the Bell-shaped (Gaussian) function&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cdslab.org/recipes/programming/while-loop-to-for-loop/while-loop-to-for-loop&quot; target=&quot;_blank&quot;&gt;The while-loop implementation of for-loop&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cdslab.org/recipes/programming/precision-error-paradox/precision-error-paradox&quot; target=&quot;_blank&quot;&gt;Impact of machine precision on numerical computation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cdslab.org/recipes/programming/roundoff-error-paradox/roundoff-error-paradox&quot; target=&quot;_blank&quot;&gt;Impact of round-off errors on numerical computations&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cdslab.org/recipes/programming/one-line-check-even-number/one-line-check-even-number&quot; target=&quot;_blank&quot;&gt;Check if number is even in one line function definition&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cdslab.org/recipes/programming/largest-prime-number-smaller-than-input/largest-prime-number-smaller-than-input&quot; target=&quot;_blank&quot;&gt;Getting the largest prime number smaller than the input value&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;http:/DMC2020U/homework/2-python-programming&quot;&gt;Homework 2: Python programming&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/DMC2020U&quot;&gt;DATA 3401 - Summer 2020 - TTH 10:30-12:20 - Microsoft Teams Virtual Room&lt;/a&gt; on June 16, 2020.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>

@@ -2,8 +2,23 @@
 callback([
 
   {
+    "text": "Lecture 3: The structure of the Python programming language",
+    "href": "/DMC2020U/lecture/3-python-programming-structure"
+  } ,
+
+  {
+    "text": "Lecture 2: The Python programming language",
+    "href": "/DMC2020U/lecture/2-python-programming-introduction"
+  } ,
+
+  {
     "text": "Lecture 1: Version Control Systems, Git, and GitHub",
     "href": "/DMC2020U/lecture/1-vcs"
+  } ,
+
+  {
+    "text": "Homework 2: Python programming",
+    "href": "/DMC2020U/homework/2-python-programming"
   } ,
 
   {

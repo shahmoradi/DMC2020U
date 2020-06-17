@@ -1,6 +1,30 @@
 [
 	
 		{
+		  "title"      : "Lecture 3: The structure of the Python programming language",
+		  "category"   : "",
+		  "url"        : "/DMC2020U/lecture/3-python-programming-structure",
+		  "date"       : "2020-06-18 00:00:00 -0500",
+		  "shortdate"  : "June 18, 2020"
+		} ,
+	
+		{
+		  "title"      : "Lecture 2: The Python programming language",
+		  "category"   : "",
+		  "url"        : "/DMC2020U/lecture/2-python-programming-introduction",
+		  "date"       : "2020-06-16 00:00:00 -0500",
+		  "shortdate"  : "June 16, 2020"
+		} ,
+	
+		{
+		  "title"      : "Homework 2: Python programming",
+		  "category"   : "",
+		  "url"        : "/DMC2020U/homework/2-python-programming",
+		  "date"       : "2020-06-16 00:00:00 -0500",
+		  "shortdate"  : "June 16, 2020"
+		} ,
+	
+		{
 		  "title"      : "Lecture 1: Version Control Systems, Git, and GitHub",
 		  "category"   : "",
 		  "url"        : "/DMC2020U/lecture/1-vcs",
