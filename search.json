@@ -1,6 +1,14 @@
 [
 	
 		{
+		  "title"      : "Quiz 1: Version control system, programming history",
+		  "category"   : "",
+		  "url"        : "/DMC2020U/quiz/1-version-control-system-programming-history",
+		  "date"       : "2020-06-18 00:00:00 -0500",
+		  "shortdate"  : "June 18, 2020"
+		} ,
+	
+		{
 		  "title"      : "Lecture 3: The structure of the Python programming language",
 		  "category"   : "",
 		  "url"        : "/DMC2020U/lecture/3-python-programming-structure",
@@ -46,14 +54,6 @@
 		  "url"        : "/DMC2020U/announcement/0-student-professor-connection-day",
 		  "date"       : "2020-06-08 00:00:00 -0500",
 		  "shortdate"  : "June 08, 2020"
-		} ,
-	
-		{
-		  "title"      : "Quiz 1: Version control system, programming history",
-		  "category"   : "",
-		  "url"        : "/DMC2020U/quiz/1-version-control-system-programming-history",
-		  "date"       : "2019-08-18 00:00:00 -0500",
-		  "shortdate"  : "August 18, 2019"
 		} 
 	
 ]

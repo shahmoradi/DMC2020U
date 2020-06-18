@@ -48,6 +48,10 @@
 
     
     <url>
+        <loc>/DMC2020U/quiz/1-version-control-system-programming-history</loc>
+    </url>
+    
+    <url>
         <loc>/DMC2020U/lecture/3-python-programming-structure</loc>
     </url>
     
@@ -69,10 +73,6 @@
     
     <url>
         <loc>/DMC2020U/announcement/0-student-professor-connection-day</loc>
-    </url>
-    
-    <url>
-        <loc>/DMC2020U/quiz/1-version-control-system-programming-history</loc>
     </url>
     
 </urlset>
