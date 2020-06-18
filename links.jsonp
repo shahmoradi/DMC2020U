@@ -2,6 +2,11 @@
 callback([
 
   {
+    "text": "Quiz 1: Version control system, programming history",
+    "href": "/DMC2020U/quiz/1-version-control-system-programming-history"
+  } ,
+
+  {
     "text": "Lecture 3: The structure of the Python programming language",
     "href": "/DMC2020U/lecture/3-python-programming-structure"
   } ,
