@@ -7,6 +7,16 @@ callback([
   } ,
 
   {
+    "text": "Lecture 5: The structure of the Python programming language: classes, modules, exception handling, and input/output methods",
+    "href": "/DMC2020U/lecture/5-python-programming-modules-classes-io"
+  } ,
+
+  {
+    "text": "Lecture 4: The structure of the Python programming language: functions",
+    "href": "/DMC2020U/lecture/4-python-programming-function"
+  } ,
+
+  {
     "text": "Lecture 3: The structure of the Python programming language",
     "href": "/DMC2020U/lecture/3-python-programming-structure"
   } ,
@@ -19,6 +29,11 @@ callback([
   {
     "text": "Lecture 1: Version Control Systems, Git, and GitHub",
     "href": "/DMC2020U/lecture/1-vcs"
+  } ,
+
+  {
+    "text": "Homework 3: Python programming: Branching, functions, exception handling",
+    "href": "/DMC2020U/homework/3-python-programming"
   } ,
 
   {

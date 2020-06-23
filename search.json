@@ -1,6 +1,30 @@
 [
 	
 		{
+		  "title"      : "Lecture 5: The structure of the Python programming language: classes, modules, exception handling, and input/output methods",
+		  "category"   : "",
+		  "url"        : "/DMC2020U/lecture/5-python-programming-modules-classes-io",
+		  "date"       : "2020-06-25 00:00:00 -0500",
+		  "shortdate"  : "June 25, 2020"
+		} ,
+	
+		{
+		  "title"      : "Lecture 4: The structure of the Python programming language: functions",
+		  "category"   : "",
+		  "url"        : "/DMC2020U/lecture/4-python-programming-function",
+		  "date"       : "2020-06-23 00:00:00 -0500",
+		  "shortdate"  : "June 23, 2020"
+		} ,
+	
+		{
+		  "title"      : "Homework 3: Python programming: Branching, functions, exception handling",
+		  "category"   : "",
+		  "url"        : "/DMC2020U/homework/3-python-programming",
+		  "date"       : "2020-06-23 00:00:00 -0500",
+		  "shortdate"  : "June 23, 2020"
+		} ,
+	
+		{
 		  "title"      : "Quiz 1: Version control system, programming history",
 		  "category"   : "",
 		  "url"        : "/DMC2020U/quiz/1-version-control-system-programming-history",
