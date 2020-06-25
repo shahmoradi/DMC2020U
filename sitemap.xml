@@ -48,6 +48,10 @@
 
     
     <url>
+        <loc>/DMC2020U/quiz/2-python-programming</loc>
+    </url>
+    
+    <url>
         <loc>/DMC2020U/lecture/5-python-programming-modules-classes-io</loc>
     </url>
     
