@@ -163,18 +163,40 @@ The following figure illustrates the grade distribution for this quiz.
 <ol>
   <li>
     <p>What are the three fundamental components of a Turing-complete language?</p>
+
+    <p><strong>Answer:</strong></p>
+    <ol>
+      <li>a way for accessing the memory</li>
+      <li>a way for iteration</li>
+      <li>a way for branching</li>
+    </ol>
   </li>
   <li>
     <p>What are the three common types of errors in computer programs?</p>
+
+    <p><strong>Answer:</strong></p>
+    <ol>
+      <li>syntax errors</li>
+      <li>runtime errors</li>
+      <li>semantic errors</li>
+    </ol>
   </li>
   <li>
     <p>Suppose you write a program that has memory leak. What type of programming error you dealing with?</p>
+
+    <p><strong>Answer:</strong> runtime error</p>
   </li>
   <li>
     <p>What is the biggest integer (in base 10) that you could store in an <code>int32</code> type?</p>
+
+    <p><strong>Answer:</strong> 2,147,483,647</p>
   </li>
   <li>
     <p>What is the difference between <code>int16</code> and the (<em>unsigned</em>) <code>uint64</code> types (two major differences is enough)?</p>
+
+    <p><strong>Answer:</strong><br />
+1) <code>int16</code> is only 16 bits storage, whereas <code>uint64</code> is 64 bits storage.<br />
+2) <code>int16</code> is a signed integer storage meaning that one bit is reserved for the integer’s sign representation, whereas <code>uint64</code> can only represent positive integers.</p>
   </li>
   <li>Consider the following for-loop,<br />
 <br />
@@ -183,9 +205,68 @@ for item in mylist:
     mylist.append(item+1)
 </code></pre>
     <p>How many iterations does this for-loop perform before ending? Explain briefly why.</p>
+
+    <p><strong>Answer:</strong><br />
+This for-loop never ends! Because at each iteration, a new element is added to the end of the list. You can check if this is indeed the case by adding a print statement inside the loop,<br />
+<br /></p>
+    <pre><code class="language-python">mylist = list(range(0,10,2))
+for item in mylist:
+    mylist.append(item+1)
+    print(item)
+</code></pre>
+    <pre><code>0
+2
+4
+6
+8
+1
+3
+5
+7
+9
+2
+4
+6
+8
+10
+3
+5
+7
+9
+11
+4
+6
+8
+10
+12
+5
+7
+9
+11
+13
+6
+8
+10
+12
+14
+7
+9
+11
+</code></pre>
+    <p>and the loop keeps printing forever!</p>
   </li>
   <li>
     <p>Write a <strong>single-line</strong> python script, that prints your full name 5 times, each on a separate line.</p>
+
+    <p><strong>Answer:</strong></p>
+    <pre><code class="language-python">print('Data Mining\n'*5)
+</code></pre>
+    <pre><code>Data Mining
+Data Mining
+Data Mining
+Data Mining
+Data Mining
+</code></pre>
   </li>
   <li>Write a <strong>single-line</strong> python script, that applies the relevant Python string manipulator methods to this string,<br />
 <br />
@@ -194,16 +275,37 @@ for item in mylist:
     <p>and transforms it to the following string and and prints it on screen,</p>
     <pre><code class="language-text">.noitalupinaMgnirtSroFtaerGsInohtyP
 </code></pre>
+
+    <p><strong>Answer:</strong></p>
+    <pre><code class="language-python">print( "Python Is Great For String Manipulation.".replace(' ','')[::-1] )
+</code></pre>
+    <pre><code>.noitalupinaMgnirtSroFtaerGsInohtyP
+</code></pre>
   </li>
   <li>Make a string from the following list, with one one-line of Python code.<br />
 <br />
     <pre><code class="language-python">mylist = ['The' , 'weather' , 'is' , 'rainy' , 'today' , 'and' , 'cold' , 'only' , '22' , 'F.']
 </code></pre>
+
+    <p><strong>Answer:</strong></p>
+    <pre><code class="language-python">" ".join(mylist)
+</code></pre>
+    <pre><code>'The weather is rainy today and cold only 22 F.'
+</code></pre>
   </li>
   <li>
     <p>Are tuples mutable objects? Can they be redefined?</p>
+
+    <p><strong>Answer:</strong><br />
+No. Yes.</p>
   </li>
-  <li>How do you define an empty dictionary?</li>
+  <li>
+    <p>How do you define an empty dictionary?</p>
+
+    <p><strong>Answer:</strong></p>
+    <pre><code class="language-python">empty_dict = {} 
+</code></pre>
+  </li>
 </ol>
 
 
@@ -273,7 +375,7 @@ for item in mylist:
     <footer class="notepad-site-footer">
     <div class="copyright">
          <!-- <section>Last updated 2020 / 06 / 25</section></br> -->
-         <section>Last updated Thursday, 25 Jun 2020 at 01:03 PM CST</section></br>
+         <section>Last updated Thursday, 25 Jun 2020 at 02:01 PM CST</section></br>
          <section>All content exclusively maintained by <a href=https://www.shahmoradi.org target="_blank">Amir Shahmoradi</a> <!-- &copy;--> </section></br>
          <section><a class="icon-ghost" href="https://www.uta.edu/physics/" target="_blank">Department of Physics | Data Science Program</a></section></br>
          <section><a class="icon-ghost" href="https://www.uta.edu/" target="_blank">The University of Texas at Arlington</a></section></br>

@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/DMC2020U/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/DMC2020U/" />
-<updated>2020-06-25T13:03:22-05:00</updated>
+<updated>2020-06-25T14:01:43-05:00</updated>
 <id>http:/DMC2020U/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -52,18 +52,40 @@ The following figure illustrates the grade distribution for this quiz.
 &lt;ol&gt;
   &lt;li&gt;
     &lt;p&gt;What are the three fundamental components of a Turing-complete language?&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+    &lt;ol&gt;
+      &lt;li&gt;a way for accessing the memory&lt;/li&gt;
+      &lt;li&gt;a way for iteration&lt;/li&gt;
+      &lt;li&gt;a way for branching&lt;/li&gt;
+    &lt;/ol&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;What are the three common types of errors in computer programs?&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+    &lt;ol&gt;
+      &lt;li&gt;syntax errors&lt;/li&gt;
+      &lt;li&gt;runtime errors&lt;/li&gt;
+      &lt;li&gt;semantic errors&lt;/li&gt;
+    &lt;/ol&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Suppose you write a program that has memory leak. What type of programming error you dealing with?&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt; runtime error&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;What is the biggest integer (in base 10) that you could store in an &lt;code&gt;int32&lt;/code&gt; type?&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt; 2,147,483,647&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;What is the difference between &lt;code&gt;int16&lt;/code&gt; and the (&lt;em&gt;unsigned&lt;/em&gt;) &lt;code&gt;uint64&lt;/code&gt; types (two major differences is enough)?&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+1) &lt;code&gt;int16&lt;/code&gt; is only 16 bits storage, whereas &lt;code&gt;uint64&lt;/code&gt; is 64 bits storage.&lt;br /&gt;
+2) &lt;code&gt;int16&lt;/code&gt; is a signed integer storage meaning that one bit is reserved for the integer’s sign representation, whereas &lt;code&gt;uint64&lt;/code&gt; can only represent positive integers.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;Consider the following for-loop,&lt;br /&gt;
 &lt;br /&gt;
@@ -72,9 +94,68 @@ for item in mylist:
     mylist.append(item+1)
 &lt;/code&gt;&lt;/pre&gt;
     &lt;p&gt;How many iterations does this for-loop perform before ending? Explain briefly why.&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+This for-loop never ends! Because at each iteration, a new element is added to the end of the list. You can check if this is indeed the case by adding a print statement inside the loop,&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;mylist = list(range(0,10,2))
+for item in mylist:
+    mylist.append(item+1)
+    print(item)
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;pre&gt;&lt;code&gt;0
+2
+4
+6
+8
+1
+3
+5
+7
+9
+2
+4
+6
+8
+10
+3
+5
+7
+9
+11
+4
+6
+8
+10
+12
+5
+7
+9
+11
+13
+6
+8
+10
+12
+14
+7
+9
+11
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;and the loop keeps printing forever!&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Write a &lt;strong&gt;single-line&lt;/strong&gt; python script, that prints your full name 5 times, each on a separate line.&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;print('Data Mining\n'*5)
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;pre&gt;&lt;code&gt;Data Mining
+Data Mining
+Data Mining
+Data Mining
+Data Mining
+&lt;/code&gt;&lt;/pre&gt;
   &lt;/li&gt;
   &lt;li&gt;Write a &lt;strong&gt;single-line&lt;/strong&gt; python script, that applies the relevant Python string manipulator methods to this string,&lt;br /&gt;
 &lt;br /&gt;
@@ -83,16 +164,37 @@ for item in mylist:
     &lt;p&gt;and transforms it to the following string and and prints it on screen,&lt;/p&gt;
     &lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;.noitalupinaMgnirtSroFtaerGsInohtyP
 &lt;/code&gt;&lt;/pre&gt;
+
+    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;print( &quot;Python Is Great For String Manipulation.&quot;.replace(' ','')[::-1] )
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;pre&gt;&lt;code&gt;.noitalupinaMgnirtSroFtaerGsInohtyP
+&lt;/code&gt;&lt;/pre&gt;
   &lt;/li&gt;
   &lt;li&gt;Make a string from the following list, with one one-line of Python code.&lt;br /&gt;
 &lt;br /&gt;
     &lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;mylist = ['The' , 'weather' , 'is' , 'rainy' , 'today' , 'and' , 'cold' , 'only' , '22' , 'F.']
 &lt;/code&gt;&lt;/pre&gt;
+
+    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&quot; &quot;.join(mylist)
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;pre&gt;&lt;code&gt;'The weather is rainy today and cold only 22 F.'
+&lt;/code&gt;&lt;/pre&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Are tuples mutable objects? Can they be redefined?&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
+No. Yes.&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;How do you define an empty dictionary?&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;How do you define an empty dictionary?&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;empty_dict = {} 
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 
 
