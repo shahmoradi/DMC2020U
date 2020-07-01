@@ -12,8 +12,13 @@ callback([
   } ,
 
   {
+    "text": "Lecture 6: Object-Oriented Programming in Python, Data Visualization",
+    "href": "/DMC2020U/lecture/6-python-programming-oop-datavis"
+  } ,
+
+  {
     "text": "Lecture 5: The structure of the Python programming language: classes, modules, exception handling, and input/output methods",
-    "href": "/DMC2020U/lecture/5-python-programming-modules-classes-io"
+    "href": "/DMC2020U/lecture/5-python-programming-modules-classes-io-Copy"
   } ,
 
   {
@@ -34,6 +39,11 @@ callback([
   {
     "text": "Lecture 1: Version Control Systems, Git, and GitHub",
     "href": "/DMC2020U/lecture/1-vcs"
+  } ,
+
+  {
+    "text": "Homework 4: Object-Oriented Programming, Data Visualization",
+    "href": "/DMC2020U/homework/4-class-datavis"
   } ,
 
   {

@@ -7,13 +7,70 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/DMC2020U/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/DMC2020U/" />
-<updated>2020-06-25T14:01:43-05:00</updated>
+<updated>2020-07-01T00:28:31-05:00</updated>
 <id>http:/DMC2020U/</id>
 <author>
   <name>Amir Shahmoradi</name>
   <uri>http:/DMC2020U/</uri>
   <email>shahmoradi@utexas.edu</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Lecture 6: Object-Oriented Programming in Python, Data Visualization]]></title>
+  <link rel="alternate" type="text/html" href="http:/DMC2020U/lecture/6-python-programming-oop-datavis"/>
+  <id>http:/DMC2020U/lecture/6-python-programming-oop-datavis</id>
+  <published>2020-06-30T00:00:00-05:00</published>
+  <updated>0000-00-00T00:00:00-00:00</updated>
+  
+  <author>
+    <name>Amir Shahmoradi</name>
+    <uri>http:/DMC2020U</uri>
+    <email>shahmoradi@utexas.edu</email>
+  </author>
+  
+  <content type="html">
+  
+    
+&lt;p&gt;This lecture continues the discussion of the Python programming language and introduces the concepts of classes. Data Visualization techniques will be also discussed,&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cdslab.org/python/notes/object-oriented-programming/instantiation/instantiation.html&quot; target=&quot;_blank&quot;&gt;OOP - instantiation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cdslab.org/python/notes/object-oriented-programming/encapsulation/encapsulation.html&quot; target=&quot;_blank&quot;&gt;OOP - encapsulation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://serialmentor.com/dataviz/&quot; target=&quot;_blank&quot;&gt;Data Visualization&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;http:/DMC2020U/lecture/6-python-programming-oop-datavis&quot;&gt;Lecture 6: Object-Oriented Programming in Python, Data Visualization&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/DMC2020U&quot;&gt;DATA 3401 - Summer 2020 - TTH 10:30-12:20 - Microsoft Teams Virtual Room&lt;/a&gt; on June 30, 2020.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Homework 4: Object-Oriented Programming, Data Visualization]]></title>
+  <link rel="alternate" type="text/html" href="http:/DMC2020U/homework/4-class-datavis"/>
+  <id>http:/DMC2020U/homework/4-class-datavis</id>
+  <published>2020-06-30T00:00:00-05:00</published>
+  <updated>2020-06-30T00:00:00-05:00</updated>
+  <author>
+    <name>Amir Shahmoradi</name>
+    <uri>http:/DMC2020U</uri>
+    <email>shahmoradi@utexas.edu</email>
+  </author>
+  
+  <content type="html">
+  
+    
+&lt;p&gt;♣ &lt;strong&gt;Due Date: Wednesday July 8, 2020 10:30 AM&lt;/strong&gt;. This homework aims at giving you some experience on how to program OOP-style and how to read data from web and visualize it.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cdslab.org/recipes/programming/oop-integration-simpson/oop-integration-simpson&quot; target=&quot;_blank&quot;&gt;Implementing an integration problem via an integrand object&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cdslab.org/recipes/programming/reading-data-from-web/reading-data-from-web&quot; target=&quot;_blank&quot;&gt;Reading data from the World Wide Web&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+  
+  &lt;p&gt;&lt;a href=&quot;http:/DMC2020U/homework/4-class-datavis&quot;&gt;Homework 4: Object-Oriented Programming, Data Visualization&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/DMC2020U&quot;&gt;DATA 3401 - Summer 2020 - TTH 10:30-12:20 - Microsoft Teams Virtual Room&lt;/a&gt; on June 30, 2020.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -205,8 +262,8 @@ No. Yes.&lt;/p&gt;
 
 <entry>
   <title type="html"><![CDATA[Lecture 5: The structure of the Python programming language: classes, modules, exception handling, and input/output methods]]></title>
-  <link rel="alternate" type="text/html" href="http:/DMC2020U/lecture/5-python-programming-modules-classes-io"/>
-  <id>http:/DMC2020U/lecture/5-python-programming-modules-classes-io</id>
+  <link rel="alternate" type="text/html" href="http:/DMC2020U/lecture/5-python-programming-modules-classes-io-Copy"/>
+  <id>http:/DMC2020U/lecture/5-python-programming-modules-classes-io - Copy</id>
   <published>2020-06-25T00:00:00-05:00</published>
   <updated>0000-00-00T00:00:00-00:00</updated>
   
@@ -230,7 +287,7 @@ No. Yes.&lt;/p&gt;
 &lt;/ul&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;http:/DMC2020U/lecture/5-python-programming-modules-classes-io&quot;&gt;Lecture 5: The structure of the Python programming language: classes, modules, exception handling, and input/output methods&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/DMC2020U&quot;&gt;DATA 3401 - Summer 2020 - TTH 10:30-12:20 - Microsoft Teams Virtual Room&lt;/a&gt; on June 25, 2020.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http:/DMC2020U/lecture/5-python-programming-modules-classes-io-Copy&quot;&gt;Lecture 5: The structure of the Python programming language: classes, modules, exception handling, and input/output methods&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/DMC2020U&quot;&gt;DATA 3401 - Summer 2020 - TTH 10:30-12:20 - Microsoft Teams Virtual Room&lt;/a&gt; on June 25, 2020.&lt;/p&gt;</content>
 </entry>
 
 
