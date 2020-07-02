@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/DMC2020U/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/DMC2020U/" />
-<updated>2020-07-02T15:04:48-05:00</updated>
+<updated>2020-07-02T15:30:27-05:00</updated>
 <id>http:/DMC2020U/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -192,12 +192,16 @@ for item in mylist:
   <content type="html">
   
     
-&lt;p&gt;♣ &lt;strong&gt;Due Date: Wednesday July 8, 2020 10:30 AM&lt;/strong&gt;. This homework aims at giving you some experience on how to program OOP-style.&lt;/p&gt;
+&lt;p&gt;♣ &lt;strong&gt;Due Date: Wednesday July 8, 2020 10:30 AM&lt;/strong&gt;. This homework aims at giving you some experience on how to program OOP-style, as well as some data visualization tips.&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.cdslab.org/recipes/programming/oop-integration-simpson/oop-integration-simpson&quot; target=&quot;_blank&quot;&gt;Implementing an integration problem via an integrand object&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.cdslab.org/recipes/programming/oop-integration-simpson/oop-integration-simpson&quot; target=&quot;_blank&quot;&gt;Implementing an integration problem via an integrand object&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.cdslab.org/recipes/programming/coordinates-transformation/coordinates-transformation&quot; target=&quot;_blank&quot;&gt;Coordinate transformation&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
-
 
   
   &lt;p&gt;&lt;a href=&quot;http:/DMC2020U/homework/4-class-datavis&quot;&gt;Homework 4: Object-Oriented Programming, Data Visualization&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/DMC2020U&quot;&gt;DATA 3401 - Summer 2020 - TTH 10:30-12:20 - Microsoft Teams Virtual Room&lt;/a&gt; on June 30, 2020.&lt;/p&gt;</content>
