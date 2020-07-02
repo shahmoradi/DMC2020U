@@ -165,12 +165,18 @@ The following figure illustrates the grade distribution for this quiz.
     <pre><code class="language-bash">python outputter.py outputter.in outputter.out
 </code></pre>
     <p>and then writes the same float data in the output file <code>outputter.out</code> (whose name and path was taken from the command-line), and writes out data in a formatted style, like this <a href="/DMC2020U/quiz/3/outputter.out" target="_blank">example output file</a>, with only three digits after decimal point.</p>
+
+    <p><strong>Answer:</strong><br />
+<a href="/DMC2020U/quiz/3/solutions/outputter.py" target="_blank">Here</a> is an example attempt.</p>
   </li>
   <li>Suppose you write a Python module, which you would also like to run it as a standalone Python code. If you wanted to make sure that some specific Python statements are executed only when the code is run a Python code (and not a module), you may recall from the lecture, that we had to use and if block like the following,
     <pre><code class="language-python">if __name__ == "__main__":
 &lt;Python statements&gt;
 </code></pre>
     <p>Briefly explain what this if block does and mean.</p>
+
+    <p><strong>Answer:</strong><br />
+Each Python module has an attribute <code>__name__</code>. When the code is used as a Python module, the <code>__name__</code> is set to the name of the module, otherwise it is set to <code>__main__</code>. Therefore, this if block makes sure that the code is running as a standalone code or not.</p>
   </li>
   <li>Suppose you are given two lists of numbers,
     <pre><code class="language-python">even = [0,2,4,6,8]
@@ -181,6 +187,15 @@ odd = [1,3,5,7,9]
 </code></pre>
     <pre><code>[1, 5, 9, 13, 17]  
 </code></pre>
+
+    <p><strong>Answer:</strong></p>
+    <pre><code class="language-python">even = [0,2,4,6,8]
+odd = [1,3,5,7,9]
+summ = [i+j for i,j in zip(odd,even)]
+summ
+</code></pre>
+    <pre><code>[1, 5, 9, 13, 17]  
+</code></pre>
   </li>
   <li>Consider the following for-loop,
     <pre><code class="language-python">mylist = list(range(0,10,2))
@@ -188,6 +203,53 @@ for item in mylist:
     mylist.append(item+1)
 </code></pre>
     <p>How many iterations does this for-loop perform before ending? Explain briefly why.</p>
+
+    <p><strong>Answer:</strong><br />
+This for-loop never ends! Because at each iteration, a new element is added to the end of the list. You can check if this is indeed the case by adding a print statement inside the loop,</p>
+    <pre><code class="language-python">mylist = list(range(0,10,2))
+for item in mylist:
+    mylist.append(item+1)
+    print(item)
+</code></pre>
+    <pre><code>0  
+2  
+4  
+6  
+8  
+1  
+3  
+5  
+7  
+9  
+2  
+4  
+6  
+8  
+10  
+3  
+5  
+7  
+9  
+11  
+4  
+6  
+8  
+10  
+12  
+5  
+7  
+9  
+11  
+13  
+6  
+8  
+10  
+12  
+14  
+7  
+9  
+11   and the loop keeps printing forever!  
+</code></pre>
   </li>
 </ol>
 
@@ -258,7 +320,7 @@ for item in mylist:
     <footer class="notepad-site-footer">
     <div class="copyright">
          <!-- <section>Last updated 2020 / 07 / 02</section></br> -->
-         <section>Last updated Thursday, 02 Jul 2020 at 01:12 PM CST</section></br>
+         <section>Last updated Thursday, 02 Jul 2020 at 01:44 PM CST</section></br>
          <section>All content exclusively maintained by <a href=https://www.shahmoradi.org target="_blank">Amir Shahmoradi</a> <!-- &copy;--> </section></br>
          <section><a class="icon-ghost" href="https://www.uta.edu/physics/" target="_blank">Department of Physics | Data Science Program</a></section></br>
          <section><a class="icon-ghost" href="https://www.uta.edu/" target="_blank">The University of Texas at Arlington</a></section></br>
