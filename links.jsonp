@@ -2,6 +2,11 @@
 callback([
 
   {
+    "text": "Quiz 3: Python programming concepts, data IO",
+    "href": "/DMC2020U/quiz/3-python-programming"
+  } ,
+
+  {
     "text": "Quiz 2: Python programming concepts",
     "href": "/DMC2020U/quiz/2-python-programming"
   } ,
