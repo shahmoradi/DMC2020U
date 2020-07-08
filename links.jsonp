@@ -48,12 +48,12 @@ callback([
 
   {
     "text": "Homework 4: Object-Oriented Programming, Data Visualization",
-    "href": "/DMC2020U/homework/5-datavis-io"
+    "href": "/DMC2020U/homework/4-class-datavis"
   } ,
 
   {
-    "text": "Homework 4: Object-Oriented Programming, Data Visualization",
-    "href": "/DMC2020U/homework/4-class-datavis"
+    "text": "Homework 4: Data Visualization, IO",
+    "href": "/DMC2020U/homework/5-datavis-io"
   } ,
 
   {
