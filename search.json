@@ -1,6 +1,14 @@
 [
 	
 		{
+		  "title"      : "Homework 4: Object-Oriented Programming, Data Visualization",
+		  "category"   : "",
+		  "url"        : "/DMC2020U/homework/5-datavis-io",
+		  "date"       : "2020-07-07 00:00:00 -0500",
+		  "shortdate"  : "July 07, 2020"
+		} ,
+	
+		{
 		  "title"      : "Quiz 3: Python programming concepts, data IO",
 		  "category"   : "",
 		  "url"        : "/DMC2020U/quiz/3-python-programming",

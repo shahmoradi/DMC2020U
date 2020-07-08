@@ -7,13 +7,47 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/DMC2020U/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/DMC2020U/" />
-<updated>2020-07-02T15:30:27-05:00</updated>
+<updated>2020-07-08T00:33:50-05:00</updated>
 <id>http:/DMC2020U/</id>
 <author>
   <name>Amir Shahmoradi</name>
   <uri>http:/DMC2020U/</uri>
   <email>shahmoradi@utexas.edu</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Homework 4: Object-Oriented Programming, Data Visualization]]></title>
+  <link rel="alternate" type="text/html" href="http:/DMC2020U/homework/5-datavis-io"/>
+  <id>http:/DMC2020U/homework/5-datavis-io</id>
+  <published>2020-07-07T00:00:00-05:00</published>
+  <updated>2020-07-07T00:00:00-05:00</updated>
+  <author>
+    <name>Amir Shahmoradi</name>
+    <uri>http:/DMC2020U</uri>
+    <email>shahmoradi@utexas.edu</email>
+  </author>
+  
+  <content type="html">
+  
+    
+&lt;p&gt;♣ &lt;strong&gt;Due Date: Tuesday July 15, 2020 10:15 AM&lt;/strong&gt;. This homework aims at giving you some experience on how to read heterogeneous data from the web and visualize it.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.cdslab.org/recipes/programming/reading-data-from-web/reading-data-from-web&quot; target=&quot;_blank&quot;&gt;Reading data from the World Wide Web&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.cdslab.org/recipes/programming/histogram-different-transformations/histogram-different-transformations&quot; target=&quot;_blank&quot;&gt;The different faces of binned data via different transformations&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.cdslab.org/recipes/programming/data-transfer-amino-acid/data-transfer-amino-acid&quot; target=&quot;_blank&quot;&gt;Data transfer: Parsing Amino Acid data file&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;http:/DMC2020U/homework/5-datavis-io&quot;&gt;Homework 4: Object-Oriented Programming, Data Visualization&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/DMC2020U&quot;&gt;DATA 3401 - Summer 2020 - TTH 10:30-12:20 - Microsoft Teams Virtual Room&lt;/a&gt; on July 07, 2020.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
