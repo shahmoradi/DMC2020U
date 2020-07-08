@@ -11,7 +11,7 @@
 -->
 
 <meta charset="utf-8">
-<title>QUIZ 3: PYTHON PROGRAMMING CONCEPTS, DATA IO &vert; DATA 3401 - SUMMER 2020 - TTH 10:30-12:20 - MICROSOFT TEAMS VIRTUAL ROOM</title>
+<title>LECTURE 7: DATA VISUALIZATION &vert; DATA 3401 - SUMMER 2020 - TTH 10:30-12:20 - MICROSOFT TEAMS VIRTUAL ROOM</title>
 <meta name="description" content="Data Mining, Management, and Curation">
 <meta name="keywords" content="">
 
@@ -20,9 +20,9 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Quiz 3: Python programming concepts, data IO">
+<meta property="og:title" content="Lecture 7: Data Visualization">
 <meta property="og:description" content="Data Mining, Management, and Curation">
-<meta property="og:url" content="/DMC2020U/quiz/3-python-programming">
+<meta property="og:url" content="/DMC2020U/lecture/7-datavis-io">
 <meta property="og:site_name" content="DATA 3401 - Summer 2020 - TTH 10:30-12:20 - Microsoft Teams Virtual Room">
 <meta property="og:image" content="/DMC2020U/images/">
 
@@ -30,7 +30,7 @@
 
 
 
-<link rel="canonical" href="/DMC2020U/quiz/3-python-programming">
+<link rel="canonical" href="/DMC2020U/lecture/7-datavis-io">
 <!-- <link href="/DMC2020U/feed.xml" type="application/atom+xml" rel="alternate" title="DATA 3401 - Summer 2020 - TTH 10:30-12:20 - Microsoft Teams Virtual Room Feed"> -->
 
 
@@ -130,8 +130,8 @@ MathJax.Hub.Queue(function() {
                 <div class="notepad-post-title-simple row">
                     <div class="small-12 columns">
                         <div class="notepad-post-meta-simple">
-                            <h2>Quiz 3: Python programming concepts, data IO</h2>
-                            <p>by <strong>Amir Shahmoradi</strong> &#8212;  <strong><time datetime="2020-07-02T00:00:00-05:00">02 Jul 2020</time></strong></p>
+                            <h2>Lecture 7: Data Visualization</h2>
+                            <p>by <strong>Amir Shahmoradi</strong> &#8212;  <strong><time datetime="2020-07-07T00:00:00-05:00">07 Jul 2020</time></strong></p>
                         </div>
                     </div>
                 </div>
@@ -141,129 +141,25 @@ MathJax.Hub.Queue(function() {
             <article class="notepad-post-content post tag-simple">
         
             <div style="text-align:justify;">
-                <!--
-This is the solution to [Quiz 1: Problems - Version control system](1-problems-version-control-system.html){:target="_blank"}.  
+                
+<p>This lecture continues the discussion of Data Visualization techniques and input/output methods,</p>
 
-The following figure illustrates the grade distribution for this quiz.  
-<figure>
-    <img src="/DMC2020U/quiz/gradeDist/gradeHistQuiz1.png" width="700">
-    <figcaption style="text-align:center">
-        Maximum possible points is 1.
-    </figcaption>
-</figure>
--->
-
-<p>This quiz aims at testing your basic knowledge of Python programming. Don’t forget to push your answers to your remote repository by the end of quiz time. Push all your answers to <strong>quiz/3/</strong> folder in your GitHub project.</p>
-
-<hr />
-<hr />
-
-<p><br /></p>
-
-<ol>
-  <li>Consider this <a href="/DMC2020U/quiz/3/outputter.in" target="_blank">comma-separated data file</a>. Write a simple Python code <code>outputter.py</code> that takes two command line arguments like the following,
-    <pre><code class="language-bash">python outputter.py outputter.in outputter.out
-</code></pre>
-    <p>and then writes the same float data in the output file <code>outputter.out</code> (whose name and path was taken from the command-line), and writes out data in a formatted style, like this <a href="/DMC2020U/quiz/3/outputter.out" target="_blank">example output file</a>, with only three digits after decimal point.</p>
-
-    <p><strong>Answer:</strong><br />
-<a href="/DMC2020U/quiz/3/solutions/outputter.py" target="_blank">Here</a> is an example attempt.</p>
-  </li>
-  <li>Suppose you write a Python module, which you would also like to run it as a standalone Python code. If you wanted to make sure that some specific Python statements are executed only when the code is run a Python code (and not a module), you may recall from the lecture, that we had to use and if block like the following,
-    <pre><code class="language-python">if __name__ == "__main__":
-&lt;Python statements&gt;
-</code></pre>
-    <p>Briefly explain what this if block does and mean.</p>
-
-    <p><strong>Answer:</strong><br />
-Each Python module has an attribute <code>__name__</code>. When the code is used as a Python module, the <code>__name__</code> is set to the name of the module, otherwise it is set to <code>__main__</code>. Therefore, this if block makes sure that the code is running as a standalone code or not.</p>
-  </li>
-  <li>Suppose you are given two lists of numbers,
-    <pre><code class="language-python">even = [0,2,4,6,8]
-odd = [1,3,5,7,9]
-</code></pre>
-    <p>Write a <strong>one-line</strong> Python statement (list comprehension) that gives a list <code>summ</code> whose elements are the sum of the respective elements in the above two lists <code>odd</code> and <code>even</code>, that is,</p>
-    <pre><code class="language-python">summ
-</code></pre>
-    <pre><code>[1, 5, 9, 13, 17]  
-</code></pre>
-
-    <p><strong>Answer:</strong></p>
-    <pre><code class="language-python">even = [0,2,4,6,8]
-odd = [1,3,5,7,9]
-summ = [i+j for i,j in zip(odd,even)]
-summ
-</code></pre>
-    <pre><code>[1, 5, 9, 13, 17]  
-</code></pre>
-  </li>
-  <li>Consider the following for-loop,
-    <pre><code class="language-python">mylist = list(range(0,10,2))
-for item in mylist:
-    mylist.append(item+1)
-</code></pre>
-    <p>How many iterations does this for-loop perform before ending? Explain briefly why.</p>
-
-    <p><strong>Answer:</strong><br />
-This for-loop never ends! Because at each iteration, a new element is added to the end of the list. You can check if this is indeed the case by adding a print statement inside the loop,</p>
-    <pre><code class="language-python">mylist = list(range(0,10,2))
-for item in mylist:
-    mylist.append(item+1)
-    print(item)
-</code></pre>
-    <pre><code>0  
-2  
-4  
-6  
-8  
-1  
-3  
-5  
-7  
-9  
-2  
-4  
-6  
-8  
-10  
-3  
-5  
-7  
-9  
-11  
-4  
-6  
-8  
-10  
-12  
-5  
-7  
-9  
-11  
-13  
-6  
-8  
-10  
-12  
-14  
-7  
-9  
-11   and the loop keeps printing forever!  
-</code></pre>
-  </li>
-</ol>
-
+<ul>
+  <li><a href="https://www.cdslab.org/python/notes/visualization/overview/overview.html" target="_blank">visualization</a></li>
+  <li><a href="https://www.cdslab.org/python/notes/visualization/2d/2d.html" target="_blank">visualization 2D</a></li>
+  <li><a href="https://www.cdslab.org/python/notes/visualization/3d/3d.html" target="_blank">visualization 3D</a></li>
+</ul>
 
             </div>
         </article>
         <div class="cf"></div>
 <div class="row text-center">
     <section class="notepad-post-share">
-        <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Quiz 3: Python programming concepts, data IO&quot;%20/DMC2020U/quiz/3-python-programming%20via%20&#64;"
+        <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Lecture 7: Data Visualization&quot;%20/DMC2020U/lecture/7-datavis-io%20via%20&#64;"
             onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
             <i class="fa fa-twitter"></i>
         </a>
-        <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/DMC2020U/quiz/3-python-programming"
+        <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/DMC2020U/lecture/7-datavis-io"
             onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
             <i class="fa fa-facebook"></i>
         </a>

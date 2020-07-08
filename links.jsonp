@@ -17,6 +17,11 @@ callback([
   } ,
 
   {
+    "text": "Lecture 7: Data Visualization",
+    "href": "/DMC2020U/lecture/7-datavis-io"
+  } ,
+
+  {
     "text": "Lecture 6: Object-Oriented Programming in Python, Data Visualization",
     "href": "/DMC2020U/lecture/6-python-programming-oop-datavis"
   } ,

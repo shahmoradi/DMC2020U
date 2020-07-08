@@ -7,13 +7,42 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/DMC2020U/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/DMC2020U/" />
-<updated>2020-07-08T00:34:23-05:00</updated>
+<updated>2020-07-08T00:39:15-05:00</updated>
 <id>http:/DMC2020U/</id>
 <author>
   <name>Amir Shahmoradi</name>
   <uri>http:/DMC2020U/</uri>
   <email>shahmoradi@utexas.edu</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Lecture 7: Data Visualization]]></title>
+  <link rel="alternate" type="text/html" href="http:/DMC2020U/lecture/7-datavis-io"/>
+  <id>http:/DMC2020U/lecture/7-datavis-io</id>
+  <published>2020-07-07T00:00:00-05:00</published>
+  <updated>0000-00-00T00:00:00-00:00</updated>
+  
+  <author>
+    <name>Amir Shahmoradi</name>
+    <uri>http:/DMC2020U</uri>
+    <email>shahmoradi@utexas.edu</email>
+  </author>
+  
+  <content type="html">
+  
+    
+&lt;p&gt;This lecture continues the discussion of Data Visualization techniques and input/output methods,&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cdslab.org/python/notes/visualization/overview/overview.html&quot; target=&quot;_blank&quot;&gt;visualization&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cdslab.org/python/notes/visualization/2d/2d.html&quot; target=&quot;_blank&quot;&gt;visualization 2D&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cdslab.org/python/notes/visualization/3d/3d.html&quot; target=&quot;_blank&quot;&gt;visualization 3D&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;http:/DMC2020U/lecture/7-datavis-io&quot;&gt;Lecture 7: Data Visualization&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/DMC2020U&quot;&gt;DATA 3401 - Summer 2020 - TTH 10:30-12:20 - Microsoft Teams Virtual Room&lt;/a&gt; on July 07, 2020.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -31,7 +60,7 @@
   <content type="html">
   
     
-&lt;p&gt;♣ &lt;strong&gt;Due Date: Tuesday July 15, 2020 10:15 AM&lt;/strong&gt;. This homework aims at giving you some experience on how to read heterogeneous data from the web and visualize it.&lt;/p&gt;
+&lt;p&gt;♣ &lt;strong&gt;Due Date: Wednesday July 15, 2020 10:15 AM&lt;/strong&gt;. This homework aims at giving you some experience on how to read heterogeneous data from the web and visualize it.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
