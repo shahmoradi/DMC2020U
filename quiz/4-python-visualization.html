@@ -11,7 +11,7 @@
 -->
 
 <meta charset="utf-8">
-<title>QUIZ 2: PYTHON PROGRAMMING CONCEPTS &vert; DATA 3401 - SUMMER 2020 - TTH 10:30-12:20 - MICROSOFT TEAMS VIRTUAL ROOM</title>
+<title>QUIZ 3: PYTHON PROGRAMMING CONCEPTS, DATA IO &vert; DATA 3401 - SUMMER 2020 - TTH 10:30-12:20 - MICROSOFT TEAMS VIRTUAL ROOM</title>
 <meta name="description" content="Data Mining, Management, and Curation">
 <meta name="keywords" content="">
 
@@ -20,9 +20,9 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Quiz 2: Python programming concepts">
+<meta property="og:title" content="Quiz 3: Python programming concepts, data IO">
 <meta property="og:description" content="Data Mining, Management, and Curation">
-<meta property="og:url" content="/DMC2020U/quiz/2-python-programming">
+<meta property="og:url" content="/DMC2020U/quiz/4-python-visualization">
 <meta property="og:site_name" content="DATA 3401 - Summer 2020 - TTH 10:30-12:20 - Microsoft Teams Virtual Room">
 <meta property="og:image" content="/DMC2020U/images/">
 
@@ -30,7 +30,7 @@
 
 
 
-<link rel="canonical" href="/DMC2020U/quiz/2-python-programming">
+<link rel="canonical" href="/DMC2020U/quiz/4-python-visualization">
 <!-- <link href="/DMC2020U/feed.xml" type="application/atom+xml" rel="alternate" title="DATA 3401 - Summer 2020 - TTH 10:30-12:20 - Microsoft Teams Virtual Room Feed"> -->
 
 
@@ -130,8 +130,8 @@ MathJax.Hub.Queue(function() {
                 <div class="notepad-post-title-simple row">
                     <div class="small-12 columns">
                         <div class="notepad-post-meta-simple">
-                            <h2>Quiz 2: Python programming concepts</h2>
-                            <p>by <strong>Amir Shahmoradi</strong> &#8212;  <strong><time datetime="2020-06-25T00:00:00-05:00">25 Jun 2020</time></strong></p>
+                            <h2>Quiz 3: Python programming concepts, data IO</h2>
+                            <p>by <strong>Amir Shahmoradi</strong> &#8212;  <strong><time datetime="2020-07-07T00:00:00-05:00">07 Jul 2020</time></strong></p>
                         </div>
                     </div>
                 </div>
@@ -153,7 +153,7 @@ The following figure illustrates the grade distribution for this quiz.
 </figure>
 -->
 
-<p>This quiz aims at testing your basic knowledge of Python programming. Don’t forget to push your answers to your remote repository by the end of quiz time. Push all your answers to <strong>quiz/2/</strong> folder in your GitHub project.</p>
+<p>This quiz aims at testing your basic knowledge of visualization techniques and concepts.</p>
 
 <hr />
 <hr />
@@ -162,149 +162,26 @@ The following figure illustrates the grade distribution for this quiz.
 
 <ol>
   <li>
-    <p>What are the three fundamental components of a Turing-complete language?</p>
-
-    <p><strong>Answer:</strong></p>
-    <ol>
-      <li>a way for accessing the memory</li>
-      <li>a way for iteration</li>
-      <li>a way for branching</li>
-    </ol>
-  </li>
-  <li>
-    <p>What are the three common types of errors in computer programs?</p>
-
-    <p><strong>Answer:</strong></p>
-    <ol>
-      <li>syntax errors</li>
-      <li>runtime errors</li>
-      <li>semantic errors</li>
-    </ol>
-  </li>
-  <li>
-    <p>Suppose you write a program that has memory leak. What type of programming error you dealing with?</p>
-
-    <p><strong>Answer:</strong> runtime error</p>
-  </li>
-  <li>
-    <p>What is the biggest integer (in base 10) that you could store in an <code>int32</code> type?</p>
-
-    <p><strong>Answer:</strong> 2,147,483,647</p>
-  </li>
-  <li>
-    <p>What is the difference between <code>int16</code> and the (<em>unsigned</em>) <code>uint64</code> types (two major differences is enough)?</p>
+    <p>Given a plot with a curve in it, how can you visually tell if the Y component of data is exponentially related to the X component of it? How can you tell if the relationship between the X and Y components is power-law? how can you visually tell if the X component of data is exponentially related to the Y component of it?</p>
 
     <p><strong>Answer:</strong><br />
-1) <code>int16</code> is only 16 bits storage, whereas <code>uint64</code> is 64 bits storage.<br />
-2) <code>int16</code> is a signed integer storage meaning that one bit is reserved for the integer’s sign representation, whereas <code>uint64</code> can only represent positive integers.</p>
+The exponential relationship can be distinguished by log-transforming only one of the axes and observing a linear behavior in the plot. The power-law behavior can be detected by taking the log of both axes and observing a linear behavior in the plot.</p>
   </li>
-  <li>Consider the following for-loop,<br />
-<br />
-    <pre><code class="language-python">mylist = list(range(0,10,2))
-for item in mylist:
-    mylist.append(item+1)
-</code></pre>
-    <p>How many iterations does this for-loop perform before ending? Explain briefly why.</p>
+  <li>
+    <p>What is the difference between factors and levels?</p>
 
     <p><strong>Answer:</strong><br />
-This for-loop never ends! Because at each iteration, a new element is added to the end of the list. You can check if this is indeed the case by adding a print statement inside the loop,<br />
-<br /></p>
-    <pre><code class="language-python">mylist = list(range(0,10,2))
-for item in mylist:
-    mylist.append(item+1)
-    print(item)
-</code></pre>
-    <pre><code>0
-2
-4
-6
-8
-1
-3
-5
-7
-9
-2
-4
-6
-8
-10
-3
-5
-7
-9
-11
-4
-6
-8
-10
-12
-5
-7
-9
-11
-13
-6
-8
-10
-12
-14
-7
-9
-11
-</code></pre>
-    <p>and the loop keeps printing forever!</p>
+Factors are categorical data variables that describe qualities. Levels are the categories of data.</p>
   </li>
   <li>
-    <p>Write a <strong>single-line</strong> python script, that prints your full name 5 times, each on a separate line.</p>
+    <p>Name at least three different color-scales and describe their usage in visualization.</p>
 
     <p><strong>Answer:</strong></p>
-    <pre><code class="language-python">print('Data Mining\n'*5)
-</code></pre>
-    <pre><code>Data Mining
-Data Mining
-Data Mining
-Data Mining
-Data Mining
-</code></pre>
-  </li>
-  <li>Write a <strong>single-line</strong> python script, that applies the relevant Python string manipulator methods to this string,<br />
-<br />
-    <pre><code class="language-text">Python Is Great For String Manipulation.
-</code></pre>
-    <p>and transforms it to the following string and and prints it on screen,</p>
-    <pre><code class="language-text">.noitalupinaMgnirtSroFtaerGsInohtyP
-</code></pre>
-
-    <p><strong>Answer:</strong></p>
-    <pre><code class="language-python">print( "Python Is Great For String Manipulation.".replace(' ','')[::-1] )
-</code></pre>
-    <pre><code>.noitalupinaMgnirtSroFtaerGsInohtyP
-</code></pre>
-  </li>
-  <li>Make a string from the following list, with one one-line of Python code.<br />
-<br />
-    <pre><code class="language-python">mylist = ['The' , 'weather' , 'is' , 'rainy' , 'today' , 'and' , 'cold' , 'only' , '22' , 'F.']
-</code></pre>
-
-    <p><strong>Answer:</strong></p>
-    <pre><code class="language-python">" ".join(mylist)
-</code></pre>
-    <pre><code>'The weather is rainy today and cold only 22 F.'
-</code></pre>
-  </li>
-  <li>
-    <p>Are tuples mutable objects? Can they be redefined?</p>
-
-    <p><strong>Answer:</strong><br />
-No. Yes.</p>
-  </li>
-  <li>
-    <p>How do you define an empty dictionary?</p>
-
-    <p><strong>Answer:</strong></p>
-    <pre><code class="language-python">empty_dict = {} 
-</code></pre>
+    <ul>
+      <li><strong>sequential color scales</strong>: used for making plots of continuous data values.</li>
+      <li><strong>diverging color scales</strong>: to make plots of data values that have opposite directions embedded in the meaning of data.</li>
+      <li><strong>accent color scales</strong>: to highlight specific elements in the data.</li>
+    </ul>
   </li>
 </ol>
 
@@ -314,11 +191,11 @@ No. Yes.</p>
         <div class="cf"></div>
 <div class="row text-center">
     <section class="notepad-post-share">
-        <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Quiz 2: Python programming concepts&quot;%20/DMC2020U/quiz/2-python-programming%20via%20&#64;"
+        <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Quiz 3: Python programming concepts, data IO&quot;%20/DMC2020U/quiz/4-python-visualization%20via%20&#64;"
             onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
             <i class="fa fa-twitter"></i>
         </a>
-        <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/DMC2020U/quiz/2-python-programming"
+        <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/DMC2020U/quiz/4-python-visualization"
             onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
             <i class="fa fa-facebook"></i>
         </a>
