@@ -2,13 +2,13 @@
 callback([
 
   {
-    "text": "Quiz 3: Python programming concepts, data IO",
-    "href": "/DMC2020U/quiz/3-python-programming"
+    "text": "Quiz 4: visualization",
+    "href": "/DMC2020U/quiz/4-python-visualization"
   } ,
 
   {
     "text": "Quiz 3: Python programming concepts, data IO",
-    "href": "/DMC2020U/quiz/4-python-visualization"
+    "href": "/DMC2020U/quiz/3-python-programming"
   } ,
 
   {
