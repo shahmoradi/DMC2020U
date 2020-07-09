@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/DMC2020U/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/DMC2020U/" />
-<updated>2020-07-09T13:07:32-05:00</updated>
+<updated>2020-07-09T13:08:35-05:00</updated>
 <id>http:/DMC2020U/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -52,25 +52,12 @@ The following figure illustrates the grade distribution for this quiz.
 &lt;ol&gt;
   &lt;li&gt;
     &lt;p&gt;Given a plot with a curve in it, how can you visually tell if the Y component of data is exponentially related to the X component of it? How can you tell if the relationship between the X and Y components is power-law? how can you visually tell if the X component of data is exponentially related to the Y component of it?&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-The exponential relationship can be distinguished by log-transforming only one of the axes and observing a linear behavior in the plot. The power-law behavior can be detected by taking the log of both axes and observing a linear behavior in the plot.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;What is the difference between factors and levels?&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-Factors are categorical data variables that describe qualities. Levels are the categories of data.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Name at least three different color-scales and describe their usage in visualization.&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;sequential color scales&lt;/strong&gt;: used for making plots of continuous data values.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;diverging color scales&lt;/strong&gt;: to make plots of data values that have opposite directions embedded in the meaning of data.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;accent color scales&lt;/strong&gt;: to highlight specific elements in the data.&lt;/li&gt;
-    &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
