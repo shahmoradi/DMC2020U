@@ -57,6 +57,11 @@ callback([
   } ,
 
   {
+    "text": "Homework 6: Regression as an optimization problem",
+    "href": "/DMC2020U/homework/6-regression"
+  } ,
+
+  {
     "text": "Homework 5: Data Visualization, IO",
     "href": "/DMC2020U/homework/5-datavis-io"
   } ,

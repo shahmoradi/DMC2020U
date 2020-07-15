@@ -7,13 +7,44 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/DMC2020U/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/DMC2020U/" />
-<updated>2020-07-11T22:44:37-05:00</updated>
+<updated>2020-07-14T23:56:46-05:00</updated>
 <id>http:/DMC2020U/</id>
 <author>
   <name>Amir Shahmoradi</name>
   <uri>http:/DMC2020U/</uri>
   <email>shahmoradi@utexas.edu</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Homework 6: Regression as an optimization problem]]></title>
+  <link rel="alternate" type="text/html" href="http:/DMC2020U/homework/6-regression"/>
+  <id>http:/DMC2020U/homework/6-regression</id>
+  <published>2020-07-14T00:00:00-05:00</published>
+  <updated>2020-07-14T00:00:00-05:00</updated>
+  <author>
+    <name>Amir Shahmoradi</name>
+    <uri>http:/DMC2020U</uri>
+    <email>shahmoradi@utexas.edu</email>
+  </author>
+  
+  <content type="html">
+  
+    
+&lt;p&gt;♣ &lt;strong&gt;Due Date: Wednesday July 22, 2020 10:15 AM&lt;/strong&gt;. This homework aims at giving you some experience on how to perform an optiomization, in particular, within the context of regression.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.cdslab.org/recipes/programming/regression-simple-least-squares-method/regression-simple-least-squares-method&quot; target=&quot;_blank&quot;&gt;Regression: obtaining the most likely mean of a set of Standard Normally Distributed Random Variables&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.cdslab.org/recipes/programming/regression-predicting-future-global-land-temperature/regression-predicting-future-global-land-temperature&quot; target=&quot;_blank&quot;&gt;Regression: Predicting the global land temperature of the Earth in 2050 from the past data&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;http:/DMC2020U/homework/6-regression&quot;&gt;Homework 6: Regression as an optimization problem&lt;/a&gt; was originally published by Amir Shahmoradi at &lt;a href=&quot;http:/DMC2020U&quot;&gt;DATA 3401 - Summer 2020 - TTH 10:30-12:20 - Microsoft Teams Virtual Room&lt;/a&gt; on July 14, 2020.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
