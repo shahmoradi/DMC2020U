@@ -1,6 +1,14 @@
 [
 	
 		{
+		  "title"      : "Quiz 5: visualization, IO",
+		  "category"   : "",
+		  "url"        : "/DMC2020U/quiz/5-visualization-io",
+		  "date"       : "2020-07-16 00:00:00 -0500",
+		  "shortdate"  : "July 16, 2020"
+		} ,
+	
+		{
 		  "title"      : "Homework 6: Regression as an optimization problem",
 		  "category"   : "",
 		  "url"        : "/DMC2020U/homework/6-regression",
