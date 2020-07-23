@@ -1,6 +1,14 @@
 [
 	
 		{
+		  "title"      : "Quiz 6: Regression",
+		  "category"   : "",
+		  "url"        : "/DMC2020U/quiz/6-regression",
+		  "date"       : "2020-07-23 00:00:00 -0500",
+		  "shortdate"  : "July 23, 2020"
+		} ,
+	
+		{
 		  "title"      : "Quiz 5: visualization, IO",
 		  "category"   : "",
 		  "url"        : "/DMC2020U/quiz/5-visualization-io",

@@ -2,6 +2,11 @@
 callback([
 
   {
+    "text": "Quiz 6: Regression",
+    "href": "/DMC2020U/quiz/6-regression"
+  } ,
+
+  {
     "text": "Quiz 5: visualization, IO",
     "href": "/DMC2020U/quiz/5-visualization-io"
   } ,
