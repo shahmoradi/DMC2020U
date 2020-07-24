@@ -45,10 +45,18 @@
         <loc>/DMC2020U/tags/index.html</loc>
     </url>
     
+    <url>
+        <loc>/DMC2020U/page2/</loc>
+    </url>
+    
 
     
     <url>
         <loc>/DMC2020U/quiz/6-regression</loc>
+    </url>
+    
+    <url>
+        <loc>/DMC2020U/homework/7-regression-max-likelihood</loc>
     </url>
     
     <url>

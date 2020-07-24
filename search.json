@@ -9,6 +9,14 @@
 		} ,
 	
 		{
+		  "title"      : "Homework 7: Regression and the Maximum Likelihood method",
+		  "category"   : "",
+		  "url"        : "/DMC2020U/homework/7-regression-max-likelihood",
+		  "date"       : "2020-07-23 00:00:00 -0500",
+		  "shortdate"  : "July 23, 2020"
+		} ,
+	
+		{
 		  "title"      : "Quiz 5: visualization, IO",
 		  "category"   : "",
 		  "url"        : "/DMC2020U/quiz/5-visualization-io",

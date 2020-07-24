@@ -67,6 +67,11 @@ callback([
   } ,
 
   {
+    "text": "Homework 7: Regression and the Maximum Likelihood method",
+    "href": "/DMC2020U/homework/7-regression-max-likelihood"
+  } ,
+
+  {
     "text": "Homework 6: Regression as an optimization problem",
     "href": "/DMC2020U/homework/6-regression"
   } ,
