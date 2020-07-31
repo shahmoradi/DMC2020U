@@ -1,0 +1,91 @@
+%clc;
+%clear all;
+close all;
+%clear classes;
+format compact; format long;
+
+filePath = mfilename('fullpath');
+[currentDir,fileName,fileExt] = fileparts(filePath); cd(currentDir);
+cd(fileparts(mfilename('fullpath'))); % Change working directory to source code directory.
+addpath(genpath("../../../../libmatlab"),"-begin");
+
+% set path to the ParaMonte library
+
+%%%%%%%%%%%%% IMPORTANT %%%%%%%%%%%%%
+
+pmlibRootDir = './'; % change this path to the ParaMonte library root directory
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+addpath(genpath(pmlibRootDir));
+
+% change MATLAB's working directory to the folder containing this script
+
+filePath = mfilename('fullpath');
+[currentDir,fileName,fileExt] = fileparts(filePath); cd(currentDir);
+cd(fileparts(mfilename('fullpath'))); % Change working directory to source code directory.
+
+rho = 0.6;
+mvndev = mvnrnd([0,0],[1,rho;rho,1],10000);
+mvndev = exp(mvndev);
+%mvndev = csvread("data.csv",1);
+
+    % write data
+
+    cHeader = {'variable1' 'variable2'}; %dummy header
+    commaHeader = [ cHeader ; repmat({','},1,numel(cHeader)) ]; %insert commaas
+    commaHeader = commaHeader(:)';
+    textHeader = cell2mat(commaHeader); %cHeader in text with commas
+
+    %write header to file
+    fid = fopen('data.csv','w'); 
+    fprintf(fid,'%s\n',textHeader);
+    fclose(fid);
+
+%write data to end of file
+%dlmwrite('data.csv',mvndev,'-append');
+
+thresh = getThresh(mvndev(:,1), 1.5, 0.);
+Mask = mvndev(:,2) > thresh;
+observedData = mvndev( Mask , : );
+censoredData = mvndev( ~Mask , : );
+
+figure("color","white"); hold on; box on;
+    s1 = scatter( observedData(:,1) ...
+                , observedData(:,2) ...
+                
+            , 'MarkerFaceColor', 'black' ...
+                , 'MarkerEdgeColor', 'black' ...
+                , 'mkr', '.' ...
+                , 'color', 'red' ...
+                )
+    s2 = scatter( censoredData(:,1) ...
+                , censoredData(:,2) ...
+                , 10 ...
+                , 'MarkerFaceColor', 'black' ...
+                , 'MarkerEdgeColor', 'black' ...
+                , 'mkr', '.' ...
+                , "markersize", 3 ...
+                , 'color', [0,0,0,0.5] ...
+                )
+    scatter1.MarkerFaceAlpha = .2;
+    scatter1.MarkerEdgeAlpha = .2;
+    set(gca,'xscale','log','yscale','log');
+
+    line( mvndev(:,1) ...
+        , thresh ...
+        , "linewidth", 1 ...
+        , "color", "black" ...
+        )
+    minData = min(observedData(:));
+    maxData = max(observedData(:));
+    xlim([0.5*minData,2.0*maxData]);
+    ylim([0.5*minData,2.0*maxData]);
+    xlabel("variable1");
+    ylabel("variable2");
+
+    set(gca,"color","white");
+    export_fig("data.png","-m4 -transparent")
+hold off;
+
+
