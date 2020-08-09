@@ -67,6 +67,11 @@ callback([
   } ,
 
   {
+    "text": "Homework 8: Markov Chain Monte Carlo, Uncertainty Quantification, and Classification",
+    "href": "/DMC2020U/homework/8-mcmc-clustering"
+  } ,
+
+  {
     "text": "Homework 7: Regression and the Maximum Likelihood method",
     "href": "/DMC2020U/homework/7-regression-max-likelihood"
   } ,
