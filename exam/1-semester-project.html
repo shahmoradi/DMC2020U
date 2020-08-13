@@ -513,33 +513,7 @@ plt.show()
 
 <h2 id="regression-with-cencored-data">Regression with Cencored Data</h2>
 
-<p>Supposed we have observed a dataset comprised of $4975$ events with two attributes <code>variable1</code> and <code>variable2</code> points in this file: <a href="/DMC2020U/exam/3-problem/data.csv" target="_blank">data.csv</a>. Plotting these points would yield a scatter plot like the red points in the following plot,</p>
-
-<figure>
-    <img src="/DMC2020U/exam/3-problem/data.png" width="900" />
-</figure>
-<p><br /></p>
-
-<p>The pale black point represent the missing points from our observational dataset. These are points that we could observe (or detect) because of some instrumental bias and sample incompleteness as represented by the black line.</p>
-
-<p>Now our goal is to form a hypothesis about this dataset, that is, a hypothesis about the joint distribution of the events in the above plot and the correlation between the two variables. To make a correct assessment, we will have to also carefully consider the effects of the detection threshold (the black line) in our inference.</p>
-
-<p>To help you get started, we can first take the logarithm of this dataset to better understand the joint distribution of the two attributes of the dataset and plot the transformed data,</p>
-
-<figure>
-    <img src="/DMC2020U/exam/3-problem/logdata.png" width="900" />
-</figure>
-<p><br /></p>
-
-<p>Just by looking at the observed (red) data points, we can form a relatively good hypothesis about the joint distribution of the data: If the detection threshold did not exist, the complete dataset (including the black points) would have likely very well resembled a bivariate lognormal distribution (or a bivariate normal distribution on the logarithmic axes).</p>
-
-<p>However, this dataset is affected by the detection threshold and we need to also take a model of the detection threshold into account. The logarithmic transformation makes it crystal-clear to us that the detection threshold is likely best modeled by a power-law (or simply a line in the log-space as depicted in the above figure).</p>
-
-<p>Use the ParaMonte library from the language of your choice (e.g., Python/MATLAB) to perform a Markov Chain Monte Carlo simulation for this regression problem and find the true amount of correlation between the two attributes of this dataset, that is, after taking into account the effects of the detector threshold.</p>
-
-<p><strong>Hint:</strong></p>
-
-<p>For this problem, you will need to attend the following class lectures to get more help on the steps required to take for modeling this dataset.</p>
+<p>Check out this problem: <a href="https://www.cdslab.org/recipes/programming/regression-censored-gaussian-data/regression-censored-gaussian-data" target="_blank">Regression: Predicting the distribution of the a dataset subjected to censorship (sample incompleteness)</a>.</p>
 
 <p><br /><br /></p>
 
@@ -609,7 +583,7 @@ plt.show()
     <footer class="notepad-site-footer">
     <div class="copyright">
          <!-- <section>Last updated 2020 / 08 / 13</section></br> -->
-         <section>Last updated Thursday, 13 Aug 2020 at 02:01 AM CST</section></br>
+         <section>Last updated Thursday, 13 Aug 2020 at 11:51 AM CST</section></br>
          <section>All content exclusively maintained by <a href=https://www.shahmoradi.org target="_blank">Amir Shahmoradi</a> <!-- &copy;--> </section></br>
          <section><a class="icon-ghost" href="https://www.uta.edu/physics/" target="_blank">Department of Physics | Data Science Program</a></section></br>
          <section><a class="icon-ghost" href="https://www.uta.edu/" target="_blank">The University of Texas at Arlington</a></section></br>
