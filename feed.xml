@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http:/DMC2020U/feed.xml" />
 <link rel="alternate" type="text/html" href="http:/DMC2020U/" />
-<updated>2020-08-13T11:51:47-05:00</updated>
+<updated>2021-03-12T12:16:17-06:00</updated>
 <id>http:/DMC2020U/</id>
 <author>
   <name>Amir Shahmoradi</name>
@@ -85,7 +85,7 @@
 
 &lt;p&gt;Therefore, the vector of times at which we have the number of tumor cells measured would be,&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;Time = [ 0, 10, 12, 14, 16, 18, 20, 22 ] ~,&lt;/script&gt;
+\[Time = [ 0, 10, 12, 14, 16, 18, 20, 22 ] ~,\]
 
 &lt;p&gt;in units of days. Given this data set,&lt;/p&gt;
 
@@ -141,7 +141,7 @@
 
 &lt;p&gt;&lt;strong&gt;4. &lt;/strong&gt; Now our goal is to fit the time evolution of the growth of this tumor, using a mathematical model. To do so, we need to find the best-fit parameters of the model. The mathematical model we will use here is called the &lt;a href=&quot;https://en.wikipedia.org/wiki/Gompertz_function&quot; target=&quot;_blank&quot;&gt;Gompertzian growth model&lt;/a&gt;. Here, we will use a slightly modified form of the Gompertzian function of the following form,&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;N(t,\lambda,c) = N_0 \times \exp\bigg( \lambda~\bigg[ 1-\exp(-ct) \bigg] \bigg) ~,&lt;/script&gt;
+\[N(t,\lambda,c) = N_0 \times \exp\bigg( \lambda~\bigg[ 1-\exp(-ct) \bigg] \bigg) ~,\]
 
 &lt;p&gt;where $N(t,\lambda,c)$ is the &lt;strong&gt;predicted number&lt;/strong&gt; of tumor cells at time $t$, $N_0$ is the initial number of tumor cells at time $t=0$ days, $\lambda$ is the growth rate parameter of the model, and $c$ is just another parameter of the model. We already know the initial value of the number of tumor cells, $N_0=100,000\pm10,000$. Therefore, we can fix $N_0$ to $100,000$ in the equation of the model given above.&lt;/p&gt;
 
@@ -155,7 +155,7 @@
 
 &lt;p&gt;Therefore, we have to seek for the parameter values that can bring the model prediction us as close as possible to data. To do so, we define a &lt;strong&gt;statistical model&lt;/strong&gt; in addition to the &lt;strong&gt;physical model&lt;/strong&gt; described above. In other words, we have to define a statistical regression model (the renowned &lt;strong&gt;least-squares method&lt;/strong&gt;) that gives us the probability $\pi(\log N_{obs}|\log N(t))$ of observing individual data points at each of the given times,&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\pi(\log N_{obs} | \log N(t,\lambda,c),\sigma) = \frac{1}{\sigma\sqrt{2\pi}} \exp\bigg( - \frac{ \big[ \log N_{obs}(t)-\log N(t,\lambda,c) \big]^2}{2\sigma^2} \bigg) ~,&lt;/script&gt;
+\[\pi(\log N_{obs} | \log N(t,\lambda,c),\sigma) = \frac{1}{\sigma\sqrt{2\pi}} \exp\bigg( - \frac{ \big[ \log N_{obs}(t)-\log N(t,\lambda,c) \big]^2}{2\sigma^2} \bigg) ~,\]
 
 &lt;p&gt;Note that our statistical model given above is a Normal probability density function, with its mean parameter represented by &lt;strong&gt;the log&lt;/strong&gt; of the output of our physical model, $\log N(t,\lambda,c)$, and its standard deviation represented by $\sigma$, which is unknown, and we seek to find it. The symbol $\pi$, whenever it appears with parentheses, like $\pi()$, it means the probability of the entity inside the parentheses. However, whenever it appears alone, it means the famous number PI, $\pi\approx 3.1415$.&lt;/p&gt;
 
@@ -163,21 +163,19 @@
 
 &lt;p&gt;We have seven data points, so the overall probability of observing all of data $\mathcal{D}$ together (the time vector and the logarithm of the number of cells at different times) given the parameters of the model, $\mathcal{L}(\mathcal{D}|\lambda,c,\sigma)$, is the product of their individual probabilities of observations given by the above equation,&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
-\begin{align*}
+\[\begin{align*}
 \mathcal{L}(\mathcal{D}|\lambda,c,\sigma) 
-&amp;= \prod_{i=1}^{n=8} \pi(\log N_{obs}(t_i) | \log N(t_i,\lambda,c),\sigma) \\\\
-&amp;= \prod_{i=1}^{n=8} \frac{1}{\sigma\sqrt{2\pi}} \exp\bigg( - \frac{ \big[ \log N_{obs}(t_i)-\log N(t_i,\lambda,c) \big]^2}{2\sigma^2} \bigg) ~.
-\end{align*} %]]&gt;&lt;/script&gt;
+&amp;amp;= \prod_{i=1}^{n=8} \pi(\log N_{obs}(t_i) | \log N(t_i,\lambda,c),\sigma) \\\\
+&amp;amp;= \prod_{i=1}^{n=8} \frac{1}{\sigma\sqrt{2\pi}} \exp\bigg( - \frac{ \big[ \log N_{obs}(t_i)-\log N(t_i,\lambda,c) \big]^2}{2\sigma^2} \bigg) ~.
+\end{align*}\]
 
 &lt;p&gt;Frequently, however, you would want to work with $\log\mathcal{L}$ instead of $\mathcal{L}$. This is again because the numbers involved are extremely small often below the precision limits of the computer. So, by taking the logarithm of the numbers, we work instead with the number’s exponent, which looks just like a normal number (not so big, not so small). So, by taking the log, the above equation becomes,&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
-\begin{align*}
+\[\begin{align*}
     \log\mathcal{L}(\mathcal{D}|\lambda,c,\sigma)
-    &amp;= \sum_{i=1}^{n=8} \log \pi( \log N_{obs}(t_i) | \log N(t_i,\lambda,c),\sigma) \\\\
-    &amp;= \sum_{i=1}^{n=8} \log \bigg[ \frac{1}{\sigma\sqrt{2\pi}} \exp\bigg( - \frac{ \big[ \log N_{obs}(t_i) - \log N(t_i,\lambda,c) \big]^2}{2\sigma^2} \bigg) \bigg] ~.
-\end{align*} %]]&gt;&lt;/script&gt;
+    &amp;amp;= \sum_{i=1}^{n=8} \log \pi( \log N_{obs}(t_i) | \log N(t_i,\lambda,c),\sigma) \\\\
+    &amp;amp;= \sum_{i=1}^{n=8} \log \bigg[ \frac{1}{\sigma\sqrt{2\pi}} \exp\bigg( - \frac{ \big[ \log N_{obs}(t_i) - \log N(t_i,\lambda,c) \big]^2}{2\sigma^2} \bigg) \bigg] ~.
+\end{align*}\]
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -635,25 +633,12 @@ The following figure illustrates the grade distribution for this quiz.
 &lt;ol&gt;
   &lt;li&gt;
     &lt;p&gt;Given a plot with a curve in it, how can you visually tell if the Y component of data is exponentially related to the X component of it? How can you tell if the relationship between the X and Y components is power-law? how can you visually tell if the X component of data is exponentially related to the Y component of it?&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-The exponential relationship can be distinguished by log-transforming only one of the axes and observing a linear behavior in the plot. The power-law behavior can be detected by taking the log of both axes and observing a linear behavior in the plot.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;What is the difference between factors and levels?&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-Factors are categorical data variables that describe qualities. Levels are the categories of data.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Name at least three different color-scales and describe their usage in visualization.&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;sequential color scales&lt;/strong&gt;: used for making plots of continuous data values.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;diverging color scales&lt;/strong&gt;: to make plots of data values that have opposite directions embedded in the meaning of data.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;accent color scales&lt;/strong&gt;: to highlight specific elements in the data.&lt;/li&gt;
-    &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
@@ -764,18 +749,12 @@ The following figure illustrates the grade distribution for this quiz.
     &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;python outputter.py outputter.in outputter.out
 &lt;/code&gt;&lt;/pre&gt;
     &lt;p&gt;and then writes the same float data in the output file &lt;code&gt;outputter.out&lt;/code&gt; (whose name and path was taken from the command-line), and writes out data in a formatted style, like this &lt;a href=&quot;http:/DMC2020U/quiz/3/outputter.out&quot; target=&quot;_blank&quot;&gt;example output file&lt;/a&gt;, with only three digits after decimal point.&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-&lt;a href=&quot;http:/DMC2020U/quiz/3/solutions/outputter.py&quot; target=&quot;_blank&quot;&gt;Here&lt;/a&gt; is an example attempt.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;Suppose you write a Python module, which you would also like to run it as a standalone Python code. If you wanted to make sure that some specific Python statements are executed only when the code is run a Python code (and not a module), you may recall from the lecture, that we had to use and if block like the following,
     &lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;if __name__ == &quot;__main__&quot;:
 &amp;lt;Python statements&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
     &lt;p&gt;Briefly explain what this if block does and mean.&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-Each Python module has an attribute &lt;code&gt;__name__&lt;/code&gt;. When the code is used as a Python module, the &lt;code&gt;__name__&lt;/code&gt; is set to the name of the module, otherwise it is set to &lt;code&gt;__main__&lt;/code&gt;. Therefore, this if block makes sure that the code is running as a standalone code or not.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;Suppose you are given two lists of numbers,
     &lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;even = [0,2,4,6,8]
@@ -786,15 +765,6 @@ odd = [1,3,5,7,9]
 &lt;/code&gt;&lt;/pre&gt;
     &lt;pre&gt;&lt;code&gt;[1, 5, 9, 13, 17]  
 &lt;/code&gt;&lt;/pre&gt;
-
-    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
-    &lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;even = [0,2,4,6,8]
-odd = [1,3,5,7,9]
-summ = [i+j for i,j in zip(odd,even)]
-summ
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;pre&gt;&lt;code&gt;[1, 5, 9, 13, 17]  
-&lt;/code&gt;&lt;/pre&gt;
   &lt;/li&gt;
   &lt;li&gt;Consider the following for-loop,
     &lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;mylist = list(range(0,10,2))
@@ -802,53 +772,6 @@ for item in mylist:
     mylist.append(item+1)
 &lt;/code&gt;&lt;/pre&gt;
     &lt;p&gt;How many iterations does this for-loop perform before ending? Explain briefly why.&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-This for-loop never ends! Because at each iteration, a new element is added to the end of the list. You can check if this is indeed the case by adding a print statement inside the loop,&lt;/p&gt;
-    &lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;mylist = list(range(0,10,2))
-for item in mylist:
-    mylist.append(item+1)
-    print(item)
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;pre&gt;&lt;code&gt;0  
-2  
-4  
-6  
-8  
-1  
-3  
-5  
-7  
-9  
-2  
-4  
-6  
-8  
-10  
-3  
-5  
-7  
-9  
-11  
-4  
-6  
-8  
-10  
-12  
-5  
-7  
-9  
-11  
-13  
-6  
-8  
-10  
-12  
-14  
-7  
-9  
-11   and the loop keeps printing forever!  
-&lt;/code&gt;&lt;/pre&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
@@ -954,40 +877,18 @@ The following figure illustrates the grade distribution for this quiz.
 &lt;ol&gt;
   &lt;li&gt;
     &lt;p&gt;What are the three fundamental components of a Turing-complete language?&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
-    &lt;ol&gt;
-      &lt;li&gt;a way for accessing the memory&lt;/li&gt;
-      &lt;li&gt;a way for iteration&lt;/li&gt;
-      &lt;li&gt;a way for branching&lt;/li&gt;
-    &lt;/ol&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;What are the three common types of errors in computer programs?&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
-    &lt;ol&gt;
-      &lt;li&gt;syntax errors&lt;/li&gt;
-      &lt;li&gt;runtime errors&lt;/li&gt;
-      &lt;li&gt;semantic errors&lt;/li&gt;
-    &lt;/ol&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Suppose you write a program that has memory leak. What type of programming error you dealing with?&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt; runtime error&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;What is the biggest integer (in base 10) that you could store in an &lt;code&gt;int32&lt;/code&gt; type?&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt; 2,147,483,647&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;What is the difference between &lt;code&gt;int16&lt;/code&gt; and the (&lt;em&gt;unsigned&lt;/em&gt;) &lt;code&gt;uint64&lt;/code&gt; types (two major differences is enough)?&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-1) &lt;code&gt;int16&lt;/code&gt; is only 16 bits storage, whereas &lt;code&gt;uint64&lt;/code&gt; is 64 bits storage.&lt;br /&gt;
-2) &lt;code&gt;int16&lt;/code&gt; is a signed integer storage meaning that one bit is reserved for the integer’s sign representation, whereas &lt;code&gt;uint64&lt;/code&gt; can only represent positive integers.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;Consider the following for-loop,&lt;br /&gt;
 &lt;br /&gt;
@@ -996,68 +897,9 @@ for item in mylist:
     mylist.append(item+1)
 &lt;/code&gt;&lt;/pre&gt;
     &lt;p&gt;How many iterations does this for-loop perform before ending? Explain briefly why.&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-This for-loop never ends! Because at each iteration, a new element is added to the end of the list. You can check if this is indeed the case by adding a print statement inside the loop,&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-    &lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;mylist = list(range(0,10,2))
-for item in mylist:
-    mylist.append(item+1)
-    print(item)
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;pre&gt;&lt;code&gt;0
-2
-4
-6
-8
-1
-3
-5
-7
-9
-2
-4
-6
-8
-10
-3
-5
-7
-9
-11
-4
-6
-8
-10
-12
-5
-7
-9
-11
-13
-6
-8
-10
-12
-14
-7
-9
-11
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;p&gt;and the loop keeps printing forever!&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Write a &lt;strong&gt;single-line&lt;/strong&gt; python script, that prints your full name 5 times, each on a separate line.&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
-    &lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;print('Data Mining\n'*5)
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;pre&gt;&lt;code&gt;Data Mining
-Data Mining
-Data Mining
-Data Mining
-Data Mining
-&lt;/code&gt;&lt;/pre&gt;
   &lt;/li&gt;
   &lt;li&gt;Write a &lt;strong&gt;single-line&lt;/strong&gt; python script, that applies the relevant Python string manipulator methods to this string,&lt;br /&gt;
 &lt;br /&gt;
@@ -1066,37 +908,16 @@ Data Mining
     &lt;p&gt;and transforms it to the following string and and prints it on screen,&lt;/p&gt;
     &lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;.noitalupinaMgnirtSroFtaerGsInohtyP
 &lt;/code&gt;&lt;/pre&gt;
-
-    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
-    &lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;print( &quot;Python Is Great For String Manipulation.&quot;.replace(' ','')[::-1] )
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;pre&gt;&lt;code&gt;.noitalupinaMgnirtSroFtaerGsInohtyP
-&lt;/code&gt;&lt;/pre&gt;
   &lt;/li&gt;
   &lt;li&gt;Make a string from the following list, with one one-line of Python code.&lt;br /&gt;
 &lt;br /&gt;
     &lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;mylist = ['The' , 'weather' , 'is' , 'rainy' , 'today' , 'and' , 'cold' , 'only' , '22' , 'F.']
 &lt;/code&gt;&lt;/pre&gt;
-
-    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
-    &lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;&quot; &quot;.join(mylist)
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;pre&gt;&lt;code&gt;'The weather is rainy today and cold only 22 F.'
-&lt;/code&gt;&lt;/pre&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Are tuples mutable objects? Can they be redefined?&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-No. Yes.&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;How do you define an empty dictionary?&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
-    &lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;empty_dict = {} 
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
+  &lt;li&gt;How do you define an empty dictionary?&lt;/li&gt;
 &lt;/ol&gt;
 
 
@@ -1243,8 +1064,6 @@ The following figure illustrates the grade distribution for this quiz.
  (H) &lt;code&gt;git add .; git add --u&lt;/code&gt;&lt;br /&gt;
  (I) &lt;code&gt;git add -u; git add .&lt;/code&gt;&lt;br /&gt;
  (J) &lt;code&gt;git add --u; git add .&lt;/code&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;Answer: A, D, G, F, I&lt;/strong&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Which of the following Git commands &lt;strong&gt;both&lt;/strong&gt; stages and commits &lt;strong&gt;only modified and deleted files&lt;/strong&gt; but &lt;strong&gt;NOT&lt;/strong&gt; the &lt;em&gt;new files&lt;/em&gt; added to the repository since the last commit. Choose all that apply.&lt;br /&gt;
@@ -1252,72 +1071,36 @@ The following figure illustrates the grade distribution for this quiz.
  (A) &lt;code&gt;git commit&lt;/code&gt;&lt;br /&gt;
  (B) &lt;code&gt;git commit -a&lt;/code&gt;&lt;br /&gt;
  (C) &lt;code&gt;git commit -am&lt;/code&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;Answer: B, C&lt;/strong&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Write down the Git command that lists all Git commands for you.&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
-    &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt; $ git help -a
-&lt;/code&gt;&lt;/pre&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;(A) What is the closest programming language to machine code (i.e., binary code)?&lt;/p&gt;
 
-    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-Assembly&lt;/p&gt;
-
     &lt;p&gt;(B) Does it need interpretation in order to become machine-comprehensible?&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-Yes. An &lt;em&gt;Assembler&lt;/em&gt; interprets the program for the machine.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;(A) Name the oldest high-level programming language that is still in active daily use.&lt;/p&gt;
 
-    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-Fortran&lt;/p&gt;
-
     &lt;p&gt;(B) Approximately how many decades is it old? ($\pm15$ years is acceptable answer. the decade it was created is also an acceptable answer)&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-in 1950s&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;(A) Name a second-generation programming language.&lt;/p&gt;
 
-    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-Assembly&lt;/p&gt;
-
     &lt;p&gt;(B) Which language-generation are Fortran, C, C++, MATLAB, Python, R?&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-third, third, third, fourth, fourth, fourth&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;In what decades C, C++, and MATLAB/Python were created, respectively?&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-1970s, 1980s, 1980s, 1990s&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Name an ancestor programming language of C.&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-B&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Name a programming language ancestor of C++.&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-C, Simula&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Name a programming language ancestor of MATLAB and a programming language ancestor of Python.&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;br /&gt;
-Fortran/C&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 

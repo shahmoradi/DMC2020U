@@ -168,7 +168,7 @@ MathJax.Hub.Queue(function() {
 
 <p>Therefore, the vector of times at which we have the number of tumor cells measured would be,</p>
 
-<script type="math/tex; mode=display">Time = [ 0, 10, 12, 14, 16, 18, 20, 22 ] ~,</script>
+\[Time = [ 0, 10, 12, 14, 16, 18, 20, 22 ] ~,\]
 
 <p>in units of days. Given this data set,</p>
 
@@ -224,7 +224,7 @@ MathJax.Hub.Queue(function() {
 
 <p><strong>4. </strong> Now our goal is to fit the time evolution of the growth of this tumor, using a mathematical model. To do so, we need to find the best-fit parameters of the model. The mathematical model we will use here is called the <a href="https://en.wikipedia.org/wiki/Gompertz_function" target="_blank">Gompertzian growth model</a>. Here, we will use a slightly modified form of the Gompertzian function of the following form,</p>
 
-<script type="math/tex; mode=display">N(t,\lambda,c) = N_0 \times \exp\bigg( \lambda~\bigg[ 1-\exp(-ct) \bigg] \bigg) ~,</script>
+\[N(t,\lambda,c) = N_0 \times \exp\bigg( \lambda~\bigg[ 1-\exp(-ct) \bigg] \bigg) ~,\]
 
 <p>where $N(t,\lambda,c)$ is the <strong>predicted number</strong> of tumor cells at time $t$, $N_0$ is the initial number of tumor cells at time $t=0$ days, $\lambda$ is the growth rate parameter of the model, and $c$ is just another parameter of the model. We already know the initial value of the number of tumor cells, $N_0=100,000\pm10,000$. Therefore, we can fix $N_0$ to $100,000$ in the equation of the model given above.</p>
 
@@ -238,7 +238,7 @@ MathJax.Hub.Queue(function() {
 
 <p>Therefore, we have to seek for the parameter values that can bring the model prediction us as close as possible to data. To do so, we define a <strong>statistical model</strong> in addition to the <strong>physical model</strong> described above. In other words, we have to define a statistical regression model (the renowned <strong>least-squares method</strong>) that gives us the probability $\pi(\log N_{obs}|\log N(t))$ of observing individual data points at each of the given times,</p>
 
-<script type="math/tex; mode=display">\pi(\log N_{obs} | \log N(t,\lambda,c),\sigma) = \frac{1}{\sigma\sqrt{2\pi}} \exp\bigg( - \frac{ \big[ \log N_{obs}(t)-\log N(t,\lambda,c) \big]^2}{2\sigma^2} \bigg) ~,</script>
+\[\pi(\log N_{obs} | \log N(t,\lambda,c),\sigma) = \frac{1}{\sigma\sqrt{2\pi}} \exp\bigg( - \frac{ \big[ \log N_{obs}(t)-\log N(t,\lambda,c) \big]^2}{2\sigma^2} \bigg) ~,\]
 
 <p>Note that our statistical model given above is a Normal probability density function, with its mean parameter represented by <strong>the log</strong> of the output of our physical model, $\log N(t,\lambda,c)$, and its standard deviation represented by $\sigma$, which is unknown, and we seek to find it. The symbol $\pi$, whenever it appears with parentheses, like $\pi()$, it means the probability of the entity inside the parentheses. However, whenever it appears alone, it means the famous number PI, $\pi\approx 3.1415$.</p>
 
@@ -246,21 +246,19 @@ MathJax.Hub.Queue(function() {
 
 <p>We have seven data points, so the overall probability of observing all of data $\mathcal{D}$ together (the time vector and the logarithm of the number of cells at different times) given the parameters of the model, $\mathcal{L}(\mathcal{D}|\lambda,c,\sigma)$, is the product of their individual probabilities of observations given by the above equation,</p>
 
-<script type="math/tex; mode=display">% <![CDATA[
-\begin{align*}
+\[\begin{align*}
 \mathcal{L}(\mathcal{D}|\lambda,c,\sigma) 
-&= \prod_{i=1}^{n=8} \pi(\log N_{obs}(t_i) | \log N(t_i,\lambda,c),\sigma) \\\\
-&= \prod_{i=1}^{n=8} \frac{1}{\sigma\sqrt{2\pi}} \exp\bigg( - \frac{ \big[ \log N_{obs}(t_i)-\log N(t_i,\lambda,c) \big]^2}{2\sigma^2} \bigg) ~.
-\end{align*} %]]></script>
+&amp;= \prod_{i=1}^{n=8} \pi(\log N_{obs}(t_i) | \log N(t_i,\lambda,c),\sigma) \\\\
+&amp;= \prod_{i=1}^{n=8} \frac{1}{\sigma\sqrt{2\pi}} \exp\bigg( - \frac{ \big[ \log N_{obs}(t_i)-\log N(t_i,\lambda,c) \big]^2}{2\sigma^2} \bigg) ~.
+\end{align*}\]
 
 <p>Frequently, however, you would want to work with $\log\mathcal{L}$ instead of $\mathcal{L}$. This is again because the numbers involved are extremely small often below the precision limits of the computer. So, by taking the logarithm of the numbers, we work instead with the number’s exponent, which looks just like a normal number (not so big, not so small). So, by taking the log, the above equation becomes,</p>
 
-<script type="math/tex; mode=display">% <![CDATA[
-\begin{align*}
+\[\begin{align*}
     \log\mathcal{L}(\mathcal{D}|\lambda,c,\sigma)
-    &= \sum_{i=1}^{n=8} \log \pi( \log N_{obs}(t_i) | \log N(t_i,\lambda,c),\sigma) \\\\
-    &= \sum_{i=1}^{n=8} \log \bigg[ \frac{1}{\sigma\sqrt{2\pi}} \exp\bigg( - \frac{ \big[ \log N_{obs}(t_i) - \log N(t_i,\lambda,c) \big]^2}{2\sigma^2} \bigg) \bigg] ~.
-\end{align*} %]]></script>
+    &amp;= \sum_{i=1}^{n=8} \log \pi( \log N_{obs}(t_i) | \log N(t_i,\lambda,c),\sigma) \\\\
+    &amp;= \sum_{i=1}^{n=8} \log \bigg[ \frac{1}{\sigma\sqrt{2\pi}} \exp\bigg( - \frac{ \big[ \log N_{obs}(t_i) - \log N(t_i,\lambda,c) \big]^2}{2\sigma^2} \bigg) \bigg] ~.
+\end{align*}\]
 
 <p><br /></p>
 
@@ -582,8 +580,8 @@ plt.show()
 
     <footer class="notepad-site-footer">
     <div class="copyright">
-         <!-- <section>Last updated 2020 / 08 / 13</section></br> -->
-         <section>Last updated Thursday, 13 Aug 2020 at 11:51 AM CST</section></br>
+         <!-- <section>Last updated 2021 / 03 / 12</section></br> -->
+         <section>Last updated Friday, 12 Mar 2021 at 12:16 PM CST</section></br>
          <section>All content exclusively maintained by <a href=https://www.shahmoradi.org target="_blank">Amir Shahmoradi</a> <!-- &copy;--> </section></br>
          <section><a class="icon-ghost" href="https://www.uta.edu/physics/" target="_blank">Department of Physics | Data Science Program</a></section></br>
          <section><a class="icon-ghost" href="https://www.uta.edu/" target="_blank">The University of Texas at Arlington</a></section></br>
